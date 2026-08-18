@@ -84,4 +84,4 @@ from the domain root or a sub-path — no changes needed.
   support contact (`tunora.support@gmail.com`).
 - No placeholder text, no "coming soon" sections, no download-music claims.
 
-© 2026 Hawking Lab
+© 2026 Rabby
