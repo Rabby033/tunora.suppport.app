@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Help Center — Tunora Support</title>
+  <meta name="description" content="Tunora Help Center — searchable answers about playback, search & discovery, your library, playlists, favorites, premium and settings." />
+  <meta name="theme-color" content="#0A0A0A" />
+  <link rel="icon" href="assets/logo.png" type="image/png" />
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png" />
+  <link rel="canonical" href="./help.html" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html" aria-label="Tunora Support — home">
+        <img class="logo" src="assets/logo.png" alt="" width="28" height="28" />
+        <span class="brand-text">Tunora <b>Support</b></span>
+      </a>
+      <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="primary-nav">
+        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+      </button>
+      <nav class="nav" id="primary-nav" aria-label="Primary">
+        <a href="help.html" aria-current="page">Help Center</a>
+        <a href="troubleshooting.html">Troubleshooting</a>
+        <a class="nav-cta" href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <div class="container">
+      <nav class="breadcrumbs" aria-label="Breadcrumb">
+        <ol>
+          <li><a href="index.html">Support</a></li>
+          <li class="sep" aria-hidden="true">/</li>
+          <li aria-current="page">Help Center</li>
+        </ol>
+      </nav>
+
+      <section class="section-tight">
+        <h1 class="page-title">Help Center</h1>
+        <p class="page-intro">Browse answers by topic, or search across every article below. Tap a question to expand the answer.</p>
+
+        <form class="search" role="search" aria-label="Search the Help Center" style="margin-left:0">
+          <svg class="search-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="11" cy="11" r="7" stroke="currentColor" stroke-width="2"/><path d="m20 20-3.2-3.2" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+          <label for="help-search" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)">Search the Help Center</label>
+          <input
+            type="search"
+            id="help-search"
+            placeholder="Search help articles"
+            autocomplete="off"
+            data-search
+            data-search-target="#faq-root"
+            data-search-empty="#help-search-empty"
+          />
+        </form>
+
+        <p class="q-empty" id="help-search-empty" style="margin-top:24px">No articles match your search. Try different keywords, or <a href="contact.html">contact support</a>.</p>
+
+        <div id="faq-root">
+
+          <!-- PLAYBACK -->
+          <div class="faq-group" data-search-group>
+            <h2 id="playback">Playback</h2>
+            <div class="faq">
+              <details data-search-item data-keywords="start play song tap now playing">
+                <summary>Starting playback</summary>
+                <div class="faq-body">
+                  <p>Tap any song to start playing it. Tunora opens a full-screen Now Playing view with artwork, progress and controls. Swipe or tap the mini-player at the bottom of the app to return to Now Playing at any time — it stays visible while something is loaded, no matter which tab you're on.</p>
+                </div>
+              </details>
+              <details data-search-item data-keywords="queue up next add play next reorder order">
+                <summary>Using the play queue</summary>
+                <div class="faq-body">
+                  <p>The queue is the list of songs lined up to play. From a song's options you can choose <strong>Play Next</strong> to insert it right after the current track, or <strong>Add to Queue</strong> to append it to the end.</p>
+                  <p>Open the queue from Now Playing to see what's coming up. You can reorder upcoming songs by dragging them into the order you want, and tap any item to jump straight to it.</p>
+                </div>
+              </details>
+              <details data-search-item data-keywords="shuffle repeat off all one loop">
+                <summary>Shuffle and Repeat</summary>
+                <div class="faq-body">
+                  <p><strong>Shuffle</strong> plays the current queue in a random order. <strong>Repeat</strong> cycles through three modes:</p>
+                  <ul>
+                    <li><strong>Off</strong> — playback stops after the last song in the queue.</li>
+                    <li><strong>All</strong> — the whole queue repeats from the beginning.</li>
+                    <li><strong>One</strong> — the current song repeats continuously.</li>
+                  </ul>
+                  <p>Both controls are available in the Now Playing view.</p>
+                </div>
+              </details>
+              <details data-search-item data-keywords="seek scrub progress bar rewind fast forward previous next skip">
+                <summary>Seeking, and skipping tracks</summary>
+                <div class="faq-body">
+                  <p>Drag the progress bar in Now Playing to scrub to any point in the current song. Use the <strong>Previous</strong> and <strong>Next</strong> buttons to move between tracks in the queue. Tapping Previous shortly after a song starts returns to the earlier track; later in a song it restarts the current one.</p>
+                </div>
+              </details>
+              <details id="faq-sleep-timer" data-search-item data-keywords="sleep timer stop after time bedtime pause">
+                <summary>Sleep Timer</summary>
+                <div class="faq-body">
+                  <p>The Sleep Timer automatically pauses playback after a period you choose — handy for falling asleep to music. Set it from <strong>Settings</strong> or the Now Playing controls. When the timer reaches zero, Tunora pauses playback; it can also wait for the current track to finish before stopping so a song isn't cut off. Turn it off at any time by selecting the “Off” option.</p>
+                </div>
+              </details>
+              <details data-search-item data-keywords="gapless playback no silence continuous albums live">
+                <summary>Gapless Playback</summary>
+                <div class="faq-body">
+                  <p>Gapless Playback removes the short silence between tracks so albums and live recordings play continuously. Enable or disable it in <strong>Settings → Audio</strong>. The effect is most noticeable on albums that were mastered to flow from one track into the next.</p>
+                </div>
+              </details>
+              <details data-search-item data-keywords="lock screen control center now playing background controls">
+                <summary>Lock Screen &amp; Control Center</summary>
+                <div class="faq-body">
+                  <p>Tunora integrates with iOS Now Playing, so you can see artwork and control playback from the Lock Screen and Control Center, and with connected devices such as headphones and CarPlay-style controls. Play, pause, and skip work without opening the app.</p>
+                </div>
+              </details>
+              <details id="faq-equalizer" data-search-item data-keywords="equalizer eq bass treble presets sound tuning premium">
+                <summary>Equalizer</summary>
+                <div class="faq-body">
+                  <p>The Equalizer lets you shape the sound — for example boosting bass or brightening treble — using adjustable bands and presets. Open it from <strong>Settings → Audio → Equalizer</strong>. Changes apply to playback in real time.</p>
+                  <p>The Equalizer is part of <strong>Tunora Pro</strong>. See <a href="premium.html">Premium &amp; Subscriptions</a> for details on what's included and how it works.</p>
+                </div>
+              </details>
+            </div>
+          </div>
+
+          <!-- SEARCH & DISCOVERY -->
+          <div class="faq-group" data-search-group>
+            <h2 id="search">Search &amp; Discovery</h2>
+            <div class="faq">
+              <details data-search-item data-keywords="search songs find music track suggestions">
+                <summary>Searching for songs</summary>
+                <div class="faq-body">
+                  <p>Open the <strong>Search</strong> tab and start typing. Tunora shows suggestions as you type and returns matching songs from the connected music services. Tap a result to play it or open its options.</p>
+                </div>
+              </details>
+              <details data-search-item data-keywords="search artists artist page">
+                <summary>Searching for artists</summary>
+                <div class="faq-body">
+                  <p>Search by artist name and open an artist to see their music. Artist detail pages gather top songs and related content in one place so you can keep exploring.</p>
+                </div>
+              </details>
+              <details data-search-item data-keywords="search albums album results">
+                <summary>Searching for albums</summary>
+                <div class="faq-body">
+                  <p>Search results include albums alongside songs, artists and playlists. Open an album to view and play its tracks.</p>
+                </div>
+              </details>
+              <details data-search-item data-keywords="search playlists find playlist">
+                <summary>Searching for playlists</summary>
+                <div class="faq-body">
+                  <p>Search surfaces playlists from the connected services. Open one to browse its tracks, and save it to your library to find it again quickly.</p>
+                </div>
+              </details>
+              <details data-search-item data-keywords="filters chips songs albums artists playlists narrow">
+                <summary>Search filters</summary>
+                <div class="faq-body">
+                  <p>Use the filter chips above the results to narrow what you see — for example songs, albums, artists or playlists — so you can find the right kind of result faster.</p>
+                </div>
+              </details>
+              <details id="faq-missing-song" data-search-item data-keywords="missing results no results can't find particular song region availability">
+                <summary>Why a song or result may be missing</summary>
+                <div class="faq-body">
+                  <p>Streaming search results come from third-party music services, so availability can change over time and may vary by region. A song might not appear if it isn't offered by the provider, isn't available in your region, or the title/spelling differs.</p>
+                  <p>Try alternate spellings or the artist name, adjust your <a href="help.html#settings">Region</a> in Settings, and check your connection. Tunora doesn't control which songs a provider offers. Learn more on the <a href="music-content.html">Music &amp; Content</a> page.</p>
+                </div>
+              </details>
+              <details data-search-item data-keywords="artist pages top songs detail">
+                <summary>Artist &amp; genre detail pages</summary>
+                <div class="faq-body">
+                  <p>Artist pages collect an artist's music and related content; genre and mood pages let you browse by style. Use them to discover new music beyond a single search.</p>
+                </div>
+              </details>
+              <details data-search-item data-keywords="related artists related playlists suggested discovery home feed video charts top artists">
+                <summary>Related music &amp; the Home feed</summary>
+                <div class="faq-body">
+                  <p>The <strong>Home</strong> tab offers a discovery feed with suggested music, top artists, video charts and genre browsing. While listening, Tunora also surfaces related artists and related playlists so you can keep the music going.</p>
+                </div>
+              </details>
+              <details data-search-item data-keywords="streaming availability unavailable third party provider region">
+                <summary>Streaming availability</summary>
+                <div class="faq-body">
+                  <p>Discovery and streaming rely on third-party providers. If streaming is temporarily unavailable, it's usually a connectivity issue or a provider-side change. See <a href="troubleshooting.html#streaming-unavailable">Troubleshooting</a> for steps, and note that imported local music still plays without a connection.</p>
+                </div>
+              </details>
+            </div>
+          </div>
+
+          <!-- LIBRARY -->
+          <div class="faq-group" data-search-group>
+            <h2 id="library">Library &amp; Local Music</h2>
+            <div class="faq">
+              <details id="faq-import-files" data-search-item data-keywords="import files app local music add mp3 m4a audio folder">
+                <summary>Importing music from the Files app</summary>
+                <div class="faq-body">
+                  <p>You can add your own audio files to Tunora from the <strong>Files</strong> app:</p>
+                  <ol>
+                    <li>Open Tunora and go to the <strong>Library</strong> tab.</li>
+                    <li>Start an import and choose <strong>Files</strong>.</li>
+                    <li>Select the audio files you want to add.</li>
+                  </ol>
+                  <p>Imported songs are stored on your device and play as local music — including offline, without a connection.</p>
+                </div>
+              </details>
+              <details data-search-item data-keywords="apple music import picker songs">
+                <summary>Apple Music import</summary>
+                <div class="faq-body">
+                  <p>Where supported, Tunora can import songs using the Apple Music picker. Availability depends on your device, your Apple Music setup and the format of the tracks. If a track can't be imported, try adding the file through the Files app instead.</p>
+                </div>
+              </details>
+              <details id="faq-wifi" data-search-item data-keywords="wifi transfer browser computer local server upload send music network">
+                <summary>Wi-Fi music transfer</summary>
+                <div class="faq-body">
+                  <p>Wi-Fi transfer lets you send audio files from a computer's web browser to Tunora over the same network:</p>
+                  <ol>
+                    <li>Make sure your iPhone and computer are on the <strong>same Wi-Fi network</strong>.</li>
+                    <li>In Tunora's <strong>Library</strong>, start <strong>Wi-Fi music transfer</strong>. Tunora shows a web address.</li>
+                    <li>Enter that address in your computer's browser and upload your audio files.</li>
+                    <li>Uploaded songs appear in your library as local music.</li>
+                  </ol>
+                  <p>If the page won't load, confirm both devices are on the same network and that Tunora is still showing the transfer screen. See <a href="troubleshooting.html#wifi-transfer">Troubleshooting</a> for more.</p>
+                </div>
+              </details>
+              <details data-search-item data-keywords="local playback offline no internet imported">
+                <summary>Local &amp; offline playback</summary>
+                <div class="faq-body">
+                  <p>Music you import — from Files, Apple Music or Wi-Fi transfer — is stored on your device and plays even without an internet connection. Streamed content from third-party services requires a connection.</p>
+                </div>
+              </details>
+              <details data-search-item data-keywords="artwork album cover embedded extraction missing image">
+                <summary>Artwork for imported songs</summary>
+                <div class="faq-body">
+                  <p>Tunora reads embedded artwork from your imported files and displays it automatically. If a song shows no artwork, the file likely doesn't contain any embedded image.</p>
+                </div>
+              </details>
+              <details data-search-item data-keywords="recently played history recent list">
+                <summary>Recently Played</summary>
+                <div class="faq-body">
+                  <p>Tunora keeps track of what you've been listening to so you can quickly return to recent songs from Home and your library.</p>
+                </div>
+              </details>
+              <details data-search-item data-keywords="storage usage space disk offline size manage">
+                <summary>Storage usage</summary>
+                <div class="faq-body">
+                  <p>Imported music takes up space on your device. You can review local/offline storage usage in your listening insights. To free space, remove songs you no longer need from your library.</p>
+                </div>
+              </details>
+            </div>
+          </div>
+
+          <!-- PLAYLISTS -->
+          <div class="faq-group" data-search-group>
+            <h2 id="playlists">Playlists &amp; Favorites</h2>
+            <div class="faq">
+              <details id="faq-create-playlist" data-search-item data-keywords="create playlist new make add songs">
+                <summary>Creating a playlist</summary>
+                <div class="faq-body">
+                  <p>Create a playlist from your <strong>Library</strong>, give it a name, and add songs to it. You can add tracks from search results, artist and album pages, or your imported music using a song's options menu.</p>
+                </div>
+              </details>
+              <details data-search-item data-keywords="edit playlist rename reorder remove songs manage">
+                <summary>Editing a playlist</summary>
+                <div class="faq-body">
+                  <p>Open a playlist to add or remove songs and reorder them. Changes are saved to your library automatically.</p>
+                </div>
+              </details>
+              <details data-search-item data-keywords="playlist cover custom image artwork photo">
+                <summary>Custom playlist covers</summary>
+                <div class="faq-body">
+                  <p>You can set a custom cover for your playlists to make them easy to recognize. Choose an image when editing the playlist.</p>
+                </div>
+              </details>
+              <details data-search-item data-keywords="save remote playlist streaming library keep">
+                <summary>Saving remote playlists</summary>
+                <div class="faq-body">
+                  <p>When you find a playlist from a connected service, you can save it to your library so it's easy to reopen later. Availability of the songs inside still depends on the provider.</p>
+                </div>
+              </details>
+              <details data-search-item data-keywords="favorites favourite heart songs artists playlists automatic playlist statistics insights suggestions">
+                <summary>Favorites &amp; personalization</summary>
+                <div class="faq-body">
+                  <p>Tap the heart to favorite songs, artists and playlists. Favorited songs are collected into an <strong>automatic favorites playlist</strong> for quick access from the <strong>Favorites</strong> tab.</p>
+                  <p>Tunora also builds listening insights — <strong>Pulse Insights</strong> — including total listening time, tracks played, weekly listening hours and your most-listened tracks, plus song suggestions based on what you enjoy.</p>
+                </div>
+              </details>
+            </div>
+          </div>
+
+          <!-- PREMIUM -->
+          <div class="faq-group" data-search-group>
+            <h2 id="premium">Premium</h2>
+            <div class="faq">
+              <details data-search-item data-keywords="what is tunora pro premium subscription optional">
+                <summary>What is Tunora Pro?</summary>
+                <div class="faq-body">
+                  <p>Tunora Pro is an optional subscription that unlocks premium functionality in the app. The current benefits and pricing are always shown inside Tunora before you purchase. See <a href="premium.html">Premium &amp; Subscriptions</a> for a full overview.</p>
+                </div>
+              </details>
+              <details data-search-item data-keywords="which features premium equalizer search pagination change">
+                <summary>What features are premium?</summary>
+                <div class="faq-body">
+                  <p>Premium currently includes the <strong>Equalizer</strong> and <strong>search pagination beyond the first page of results</strong>. Premium features may change or expand in future releases, so the definitive, up-to-date list is shown in the app before purchase.</p>
+                </div>
+              </details>
+              <details data-search-item data-keywords="how subscriptions work apple app store billing renew">
+                <summary>How subscriptions work</summary>
+                <div class="faq-body">
+                  <p>Subscriptions are purchased and billed through your Apple Account via the App Store. Pricing and duration are displayed in Tunora before you confirm. See <a href="premium.html">Premium &amp; Subscriptions</a> for how to manage, cancel or restore.</p>
+                </div>
+              </details>
+              <details id="faq-manage-sub" data-search-item data-keywords="manage subscription change cancel apple account settings">
+                <summary>Managing or canceling your subscription</summary>
+                <div class="faq-body">
+                  <p>You manage and cancel Tunora Pro through your Apple Account, not inside Tunora. On your iPhone: open <strong>Settings → [your name] → Subscriptions</strong>, select Tunora, and make changes there. You can also use the button on our <a href="premium.html#manage">Premium page</a>.</p>
+                </div>
+              </details>
+              <details data-search-item data-keywords="restore purchase already paid new device reinstall">
+                <summary>Restoring purchases</summary>
+                <div class="faq-body">
+                  <p>If you already subscribed — for example after reinstalling or on a new device — use <strong>Restore Purchases</strong> inside Tunora to re-activate Pro. Make sure you're signed in with the same Apple Account used for the original purchase.</p>
+                </div>
+              </details>
+              <details data-search-item data-keywords="subscription not recognized active paid purchase problem entitlement">
+                <summary>Subscription not recognized after purchase</summary>
+                <div class="faq-body">
+                  <p>If a completed purchase isn't showing as active, try <strong>Restore Purchases</strong>, confirm you're using the correct Apple Account, and check your connection. See the <a href="troubleshooting.html#pro-not-active">troubleshooting steps</a>, and contact us if it persists.</p>
+                </div>
+              </details>
+            </div>
+          </div>
+
+          <!-- SETTINGS -->
+          <div class="faq-group" data-search-group>
+            <h2 id="settings">Settings</h2>
+            <div class="faq">
+              <details data-search-item data-keywords="region country change search results location">
+                <summary>Region</summary>
+                <div class="faq-body">
+                  <p>Set your region in <strong>Settings</strong>. Region can influence discovery and which streaming results appear, since availability varies by provider and location.</p>
+                </div>
+              </details>
+              <details data-search-item data-keywords="audio settings gapless equalizer sound sleep timer">
+                <summary>Audio settings</summary>
+                <div class="faq-body">
+                  <p>The <strong>Audio</strong> section gathers playback preferences such as the Equalizer, Gapless Playback and the Sleep Timer.</p>
+                </div>
+              </details>
+              <details data-search-item data-keywords="appearance theme dark look">
+                <summary>Appearance</summary>
+                <div class="faq-body">
+                  <p>Adjust how Tunora looks from the appearance options in Settings.</p>
+                </div>
+              </details>
+              <details data-search-item data-keywords="backup restore settings preferences save transfer">
+                <summary>Backup &amp; Restore settings</summary>
+                <div class="faq-body">
+                  <p>Tunora can back up and restore your settings so your preferences carry over. Use this from the Settings screen when setting up again or moving to a new device.</p>
+                </div>
+              </details>
+              <details data-search-item data-keywords="connectivity issues internet offline network detection wifi cellular">
+                <summary>Connectivity issues</summary>
+                <div class="faq-body">
+                  <p>Tunora detects your network status and lets you know when you're offline. Streaming and discovery need an internet connection; imported local music plays offline. If streaming won't load, check Wi-Fi or cellular data and try again.</p>
+                </div>
+              </details>
+            </div>
+          </div>
+
+        </div><!-- /#faq-root -->
+
+        <div class="callout" style="margin-top:36px">
+          <h2>Didn't find your answer?</h2>
+          <p>Try the troubleshooting guides, or reach out and we'll help you directly.</p>
+          <div class="actions">
+            <a class="btn btn-primary" data-support-email href="mailto:tunora.support@gmail.com">Contact Tunora Support</a>
+            <a class="btn btn-secondary" href="troubleshooting.html">Open Troubleshooting</a>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a class="brand" href="index.html">
+            <img class="logo" src="assets/logo.png" alt="" width="28" height="28" />
+            <span class="brand-text">Tunora <b>Support</b></span>
+          </a>
+          <p>Official support for Offline Music Player: Tunora, an iOS music player combining streaming discovery with a local, offline-first library.</p>
+        </div>
+        <div class="footer-links">
+          <div class="footer-col">
+            <h4>Support</h4>
+            <ul>
+              <li><a href="help.html">Help Center</a></li>
+              <li><a href="troubleshooting.html">Troubleshooting</a></li>
+              <li><a href="contact.html">Contact Support</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Product</h4>
+            <ul>
+              <li><a href="premium.html">Premium &amp; Subscriptions</a></li>
+              <li><a href="music-content.html">Music &amp; Content</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Legal</h4>
+            <ul>
+              <li><a data-privacy-link href="privacy.html">Privacy Policy</a></li>
+              <li><a data-terms-link href="terms.html">Terms of Service</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>Offline Music Player: Tunora · © 2026 Hawking Lab</span>
+        <span><a data-support-email data-support-email-text href="mailto:tunora.support@gmail.com">tunora.support@gmail.com</a></span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="config.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>

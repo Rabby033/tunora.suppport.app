@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contact Support — Tunora Support</title>
+  <meta name="description" content="Contact the Tunora team. Email tunora.support@gmail.com or use the contact form. We're here to help with playback, library, premium and more." />
+  <meta name="theme-color" content="#0A0A0A" />
+  <link rel="icon" href="assets/logo.png" type="image/png" />
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png" />
+  <link rel="canonical" href="./contact.html" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html" aria-label="Tunora Support — home">
+        <img class="logo" src="assets/logo.png" alt="" width="28" height="28" />
+        <span class="brand-text">Tunora <b>Support</b></span>
+      </a>
+      <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="primary-nav">
+        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+      </button>
+      <nav class="nav" id="primary-nav" aria-label="Primary">
+        <a href="help.html">Help Center</a>
+        <a href="troubleshooting.html">Troubleshooting</a>
+        <a class="nav-cta" href="contact.html" aria-current="page">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <div class="container">
+      <nav class="breadcrumbs" aria-label="Breadcrumb">
+        <ol>
+          <li><a href="index.html">Support</a></li>
+          <li class="sep" aria-hidden="true">/</li>
+          <li aria-current="page">Contact</li>
+        </ol>
+      </nav>
+
+      <section class="section-tight">
+        <div class="prose" style="max-width:820px">
+          <h1 class="page-title">Contact Tunora Support</h1>
+          <p class="page-intro">Having trouble with Tunora? We're here to help.</p>
+
+          <div class="contact-strip">
+            <span class="icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none"><rect x="3" y="5" width="18" height="14" rx="2" stroke="currentColor" stroke-width="2"/><path d="m4 7 8 6 8-6" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>
+            </span>
+            <span class="cs-text">
+              <span class="label">Email us directly</span>
+              <a class="email" data-support-email data-support-email-text href="mailto:tunora.support@gmail.com">tunora.support@gmail.com</a>
+            </span>
+            <a class="btn btn-primary" data-support-email href="mailto:tunora.support@gmail.com" style="flex:none">Email Support</a>
+          </div>
+
+          <p>The fastest way to reach us is by email. You can write to us directly, or use the form below — it opens your email app with the details filled in. Either way, your message reaches the same place.</p>
+
+          <div class="note">
+            <p><strong>Please don't include passwords, payment card numbers, authentication codes, or other sensitive information</strong> in your message. We'll never ask you for them.</p>
+          </div>
+        </div>
+
+        <form class="form" id="contact-form" novalidate aria-label="Contact support form" style="max-width:820px">
+          <div class="form-grid">
+            <div class="form-row">
+              <label for="cf-name">Name</label>
+              <input type="text" id="cf-name" name="name" autocomplete="name" placeholder="Your name" />
+            </div>
+            <div class="form-row">
+              <label for="cf-email">Email <span class="req" aria-hidden="true">*</span></label>
+              <input type="email" id="cf-email" name="email" autocomplete="email" required placeholder="you@example.com" />
+            </div>
+          </div>
+
+          <div class="form-row">
+            <label for="cf-category">Issue category</label>
+            <select id="cf-category" name="category">
+              <option value="">Select a category</option>
+              <option>Playback</option>
+              <option>Search &amp; Discovery</option>
+              <option>Library &amp; Local Music</option>
+              <option>Playlists &amp; Favorites</option>
+              <option>Premium &amp; Subscriptions</option>
+              <option>Settings</option>
+              <option>Other</option>
+            </select>
+          </div>
+
+          <div class="form-row">
+            <label for="cf-description">Description <span class="req" aria-hidden="true">*</span></label>
+            <textarea id="cf-description" name="description" required placeholder="Tell us what's happening and what you've already tried."></textarea>
+          </div>
+
+          <div class="form-grid">
+            <div class="form-row">
+              <label for="cf-ios">iOS version</label>
+              <input type="text" id="cf-ios" name="ios" placeholder="e.g. iOS 18.5" />
+            </div>
+            <div class="form-row">
+              <label for="cf-appversion">Tunora version</label>
+              <input type="text" id="cf-appversion" name="appVersion" placeholder="e.g. 1.4.0" />
+            </div>
+          </div>
+
+          <div class="form-row">
+            <label for="cf-screenshot">Screenshot (optional)</label>
+            <input type="file" id="cf-screenshot" name="screenshot" accept="image/*" />
+            <p class="hint">Note: for privacy and reliability, this form opens your email app so you can attach the screenshot there before sending.</p>
+          </div>
+
+          <div class="form-actions">
+            <button type="submit" class="btn btn-primary">Prepare Email</button>
+            <a class="btn btn-secondary" data-support-email href="mailto:tunora.support@gmail.com">Email Directly Instead</a>
+          </div>
+          <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
+        </form>
+
+        <div class="prose" style="max-width:820px;margin-top:8px">
+          <div class="info-box">
+            <p>Before writing in, you may find an instant answer in the <a href="help.html">Help Center</a> or the <a href="troubleshooting.html">Troubleshooting</a> guides.</p>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a class="brand" href="index.html">
+            <img class="logo" src="assets/logo.png" alt="" width="28" height="28" />
+            <span class="brand-text">Tunora <b>Support</b></span>
+          </a>
+          <p>Official support for Offline Music Player: Tunora, an iOS music player combining streaming discovery with a local, offline-first library.</p>
+        </div>
+        <div class="footer-links">
+          <div class="footer-col">
+            <h4>Support</h4>
+            <ul>
+              <li><a href="help.html">Help Center</a></li>
+              <li><a href="troubleshooting.html">Troubleshooting</a></li>
+              <li><a href="contact.html">Contact Support</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Product</h4>
+            <ul>
+              <li><a href="premium.html">Premium &amp; Subscriptions</a></li>
+              <li><a href="music-content.html">Music &amp; Content</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Legal</h4>
+            <ul>
+              <li><a data-privacy-link href="privacy.html">Privacy Policy</a></li>
+              <li><a data-terms-link href="terms.html">Terms of Service</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>Offline Music Player: Tunora · © 2026 Hawking Lab</span>
+        <span><a data-support-email data-support-email-text href="mailto:tunora.support@gmail.com">tunora.support@gmail.com</a></span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="config.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>
