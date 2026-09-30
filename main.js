@@ -37,6 +37,15 @@
         el.setAttribute("href", cfg.manageSubscriptionsUrl);
       });
     }
+    // App Store download button(s). Point at the live listing when configured;
+    // otherwise send visitors to an App Store search for "Tunora" as a fallback.
+    var appStore =
+      cfg.appStoreUrl && cfg.appStoreUrl.trim()
+        ? cfg.appStoreUrl.trim()
+        : "https://apps.apple.com/search?term=Tunora";
+    document.querySelectorAll("[data-appstore]").forEach(function (el) {
+      el.setAttribute("href", appStore);
+    });
     // Current year for footer
     document.querySelectorAll("[data-year]").forEach(function (el) {
       el.textContent = new Date().getFullYear();
@@ -365,6 +374,103 @@
     }
   }
 
+  /* -------------------------------------------------------------------
+     6. Scroll-reveal — fades sections/cards in as they enter the viewport.
+     Only runs when <html> has .reveal-on (set inline on the home page) so
+     content pages never risk a flash of hidden content.
+  ------------------------------------------------------------------- */
+  function initReveal() {
+    var root = document.documentElement;
+    if (!root.classList.contains("reveal-on")) return;
+
+    var reduce =
+      window.matchMedia &&
+      window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+    var sel =
+      ".app-hero-copy, .app-hero-visual, .section-head, .category-card, " +
+      ".q-list, .shot, .callout, #browse .search";
+    var els = Array.prototype.slice.call(document.querySelectorAll(sel));
+    if (!els.length) return;
+
+    // Stagger siblings that animate together (cards, screenshots).
+    [
+      [".card-grid", ".category-card"],
+      [".shots", ".shot"]
+    ].forEach(function (pair) {
+      document.querySelectorAll(pair[0]).forEach(function (group) {
+        group.querySelectorAll(pair[1]).forEach(function (kid, i) {
+          kid.style.transitionDelay = i * 70 + "ms";
+        });
+      });
+    });
+
+    if (reduce || !("IntersectionObserver" in window)) {
+      els.forEach(function (el) {
+        el.classList.add("in");
+      });
+      return;
+    }
+
+    var io = new IntersectionObserver(
+      function (entries) {
+        entries.forEach(function (e) {
+          if (e.isIntersecting) {
+            e.target.classList.add("in");
+            io.unobserve(e.target);
+          }
+        });
+      },
+      { threshold: 0.12, rootMargin: "0px 0px -8% 0px" }
+    );
+    els.forEach(function (el) {
+      io.observe(el);
+    });
+  }
+
+  /* -------------------------------------------------------------------
+     7. Pointer tilt — the hero phone leans toward the cursor on devices
+     with a precise pointer. Disabled for touch and reduced-motion.
+  ------------------------------------------------------------------- */
+  function initTilt() {
+    var stage = document.querySelector(".app-hero-visual");
+    var phone = stage && stage.querySelector(".phone");
+    if (!phone) return;
+    if (
+      window.matchMedia &&
+      (!window.matchMedia("(hover: hover) and (pointer: fine)").matches ||
+        window.matchMedia("(prefers-reduced-motion: reduce)").matches)
+    ) {
+      return;
+    }
+
+    var raf = null;
+    function onMove(e) {
+      var r = stage.getBoundingClientRect();
+      var px = (e.clientX - r.left) / r.width - 0.5;
+      var py = (e.clientY - r.top) / r.height - 0.5;
+      if (raf) cancelAnimationFrame(raf);
+      raf = requestAnimationFrame(function () {
+        phone.style.transform =
+          "perspective(900px) rotateY(" +
+          px * 10 +
+          "deg) rotateX(" +
+          -py * 10 +
+          "deg) translateY(" +
+          py * 6 +
+          "px)";
+      });
+    }
+    stage.addEventListener("mouseenter", function () {
+      stage.classList.add("tilting");
+    });
+    stage.addEventListener("mousemove", onMove);
+    stage.addEventListener("mouseleave", function () {
+      stage.classList.remove("tilting");
+      phone.style.transform = "";
+    });
+  }
+
   /* ------------------------------------------------------------------- */
   function ready(fn) {
     if (document.readyState !== "loading") fn();
@@ -377,6 +483,8 @@
     initSearch();
     initSuggest();
     initContactForm();
+    initReveal();
+    initTilt();
     openFromHash();
     window.addEventListener("hashchange", openFromHash);
   });

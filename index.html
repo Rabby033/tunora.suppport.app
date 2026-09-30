@@ -3,25 +3,27 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Tunora Support — Help, Troubleshooting & Contact</title>
-  <meta name="description" content="Official support for Offline Music Player: Tunora. Find answers, troubleshoot playback issues, learn about premium, and contact the Tunora team." />
-  <meta name="theme-color" content="#0A0A0A" />
+  <title>Tunora — Offline Music Player for iPhone</title>
+  <meta name="description" content="Tunora is an offline, ad‑free music player for iPhone — stream and discover trending tracks, then keep your favorites for offline listening. Download free on the App Store." />
+  <meta name="theme-color" content="#050506" />
   <link rel="icon" href="assets/logo.png" type="image/png" />
   <link rel="apple-touch-icon" href="assets/apple-touch-icon.png" />
   <link rel="canonical" href="./index.html" />
-  <meta property="og:title" content="Tunora Support" />
-  <meta property="og:description" content="Find answers, troubleshoot playback issues, or get help with Offline Music Player: Tunora." />
+  <meta property="og:title" content="Tunora — Offline Music Player" />
+  <meta property="og:description" content="Stream, discover and play your music offline. Download Tunora free on the App Store." />
+  <meta property="og:image" content="assets/app-hero.jpeg" />
   <meta property="og:type" content="website" />
   <link rel="stylesheet" href="styles.css" />
+  <script>document.documentElement.classList.add("reveal-on");</script>
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
 
   <header class="site-header">
     <div class="container header-inner">
-      <a class="brand" href="index.html" aria-label="Tunora Support — home">
+      <a class="brand" href="index.html" aria-label="Tunora — home">
         <img class="logo" src="assets/logo.png" alt="" width="28" height="28" />
-        <span class="brand-text">Tunora <b>Support</b></span>
+        <span class="brand-text">Tunora</span>
       </a>
       <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="primary-nav">
         <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
@@ -35,20 +37,53 @@
   </header>
 
   <main id="main">
-    <!-- Hero -->
-    <section class="hero">
-      <div class="container">
-        <span class="eyebrow">Offline Music Player: Tunora</span>
-        <h1>How can we help?</h1>
-        <p class="lead">Find answers, troubleshoot playback issues, or get help with Tunora.</p>
+    <!-- Download hero -->
+    <section class="app-hero">
+      <div class="container app-hero-inner">
+        <div class="app-hero-copy">
+          <h1>Music for every <span class="hl">mood</span></h1>
+          <p class="lead">Stream and discover trending tracks, then keep your favorites for offline, ad‑free listening — all in one beautifully simple player. Download Tunora free on the App Store.</p>
 
-        <form class="search" role="search" aria-label="Search Tunora Support" onsubmit="return false">
+          <div class="app-hero-cta">
+            <a class="appstore-badge" data-appstore href="#" aria-label="Download Tunora on the App Store">
+              <svg class="apple" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16.365 1.43c0 1.14-.417 2.2-1.1 2.99-.75.86-1.97 1.53-3.02 1.45-.13-1.12.42-2.29 1.05-3.01.74-.86 2.02-1.5 3.07-1.43zM20.5 17.02c-.55 1.27-.81 1.83-1.52 2.95-.99 1.57-2.39 3.52-4.12 3.53-1.54.02-1.94-1.01-4.03-1-2.09.01-2.53 1.02-4.07 1.01-1.73-.02-3.05-1.78-4.04-3.35C.08 16.79-.2 12.02 1.5 9.49c1.05-1.57 2.71-2.49 4.27-2.49 1.59 0 2.59 1.02 3.9 1.02 1.27 0 2.05-1.02 3.89-1.02 1.39 0 2.86.76 3.91 2.07-3.44 1.88-2.88 6.79.03 7.95z"/></svg>
+              <span class="txt">
+                <span class="small">Download on the</span>
+                <span class="big">App Store</span>
+              </span>
+            </a>
+            <a class="btn btn-secondary" href="#browse">Need help? Browse support</a>
+          </div>
+
+          <ul class="app-hero-points">
+            <li><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="m5 12 5 5L20 7" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>Offline &amp; ad‑free playback</li>
+            <li><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="m5 12 5 5L20 7" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>Discover trending music</li>
+            <li><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="m5 12 5 5L20 7" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>Built‑in equalizer &amp; sleep timer</li>
+          </ul>
+        </div>
+
+        <div class="app-hero-visual">
+          <div class="phone">
+            <img src="assets/app-hero.jpeg" width="554" height="1200" alt="Tunora app home screen showing Top Artists, Video charts and the now‑playing bar." fetchpriority="high" decoding="async" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Search -->
+    <section class="section-tight" id="browse">
+      <div class="container">
+        <div class="section-head center">
+          <h2>How can we help?</h2>
+          <p>Find answers, troubleshoot playback issues, or get help with Tunora.</p>
+        </div>
+        <form class="search" role="search" aria-label="Search Tunora help" onsubmit="return false">
           <svg class="search-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="11" cy="11" r="7" stroke="currentColor" stroke-width="2"/><path d="m20 20-3.2-3.2" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
-          <label for="home-search" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)">Search Tunora Support</label>
+          <label for="home-search" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)">Search Tunora help</label>
           <input
             type="search"
             id="home-search"
-            placeholder="Search Tunora Support"
+            placeholder="Search for help…"
             autocomplete="off"
             role="combobox"
             aria-autocomplete="list"
@@ -169,7 +204,7 @@
           <h2>Still need help?</h2>
           <p>If you can't find an answer here, our team is happy to help you directly.</p>
           <div class="actions">
-            <a class="btn btn-primary" data-support-email href="mailto:tunora.support@gmail.com">Contact Tunora Support</a>
+            <a class="btn btn-primary" data-support-email href="mailto:tunora.support@gmail.com">Contact Support</a>
             <a class="btn btn-secondary" href="help.html">Browse the Help Center</a>
           </div>
         </div>
@@ -183,7 +218,7 @@
         <div class="footer-brand">
           <a class="brand" href="index.html">
             <img class="logo" src="assets/logo.png" alt="" width="28" height="28" />
-            <span class="brand-text">Tunora <b>Support</b></span>
+            <span class="brand-text">Tunora</span>
           </a>
           <p>Official support for Offline Music Player: Tunora, an iOS music player combining streaming discovery with a local, offline-first library.</p>
         </div>

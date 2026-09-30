@@ -18,6 +18,8 @@ window.TUNORA_CONFIG = {
   // Apple's subscription management deep link (works on iOS + web).
   manageSubscriptionsUrl: "https://apps.apple.com/account/subscriptions",
 
-  // App Store review/listing link (optional). Leave "" to hide "Rate" links.
-  appStoreUrl: ""
+  // App Store listing link. Used for the "Download on the App Store" button
+  // in the homepage hero. Paste your app's App Store URL here, e.g.
+  // "https://apps.apple.com/app/idXXXXXXXXXX".
+  appStoreUrl: "https://apps.apple.com/gb/app/offline-music-player-tunora/id6798962312"
 };

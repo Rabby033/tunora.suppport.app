@@ -5,9 +5,9 @@
 
 :root {
   /* Surfaces */
-  --bg: #0A0A0A;
-  --surface: #141416;
-  --surface-2: #1B1B1E;
+  --bg: #050506;
+  --surface: #121214;
+  --surface-2: #1A1A1D;
   --surface-hover: #202024;
 
   /* Text */
@@ -15,11 +15,12 @@
   --text-secondary: #A1A1A6;
   --text-tertiary: #6E6E73;
 
-  /* Accent — Tunora green, used sparingly */
-  --accent: #30D158;
-  --accent-hover: #3FE067;
-  --accent-soft: rgba(48, 209, 88, 0.12);
-  --accent-border: rgba(48, 209, 88, 0.35);
+  /* Accent — Tunora mint green (matches the app) */
+  --accent: #34E2A4;
+  --accent-hover: #59ECBA;
+  --accent-soft: rgba(52, 226, 164, 0.12);
+  --accent-border: rgba(52, 226, 164, 0.35);
+  --accent-ink: #042016; /* readable text on the accent fill */
 
   /* Lines & structure */
   --border: rgba(255, 255, 255, 0.08);
@@ -149,7 +150,7 @@ ol {
   position: sticky;
   top: 0;
   z-index: 100;
-  background: rgba(10, 10, 10, 0.82);
+  background: rgba(5, 5, 6, 0.82);
   backdrop-filter: saturate(160%) blur(14px);
   -webkit-backdrop-filter: saturate(160%) blur(14px);
   border-bottom: 1px solid var(--border);
@@ -283,7 +284,8 @@ main {
   padding: 56px 0 36px;
   text-align: center;
 }
-.hero .eyebrow {
+.hero .eyebrow,
+.app-hero .eyebrow {
   display: inline-flex;
   align-items: center;
   gap: 8px;
@@ -307,6 +309,323 @@ main {
   margin: 18px auto 0;
   font-size: clamp(17px, 2.4vw, 20px);
   color: var(--text-secondary);
+}
+
+/* ---------- Download hero (home) ---------- */
+.app-hero {
+  position: relative;
+  overflow: hidden;
+  padding: 64px 0 56px;
+  border-bottom: 1px solid var(--border);
+  background:
+    radial-gradient(1100px 520px at 78% -10%, var(--accent-soft), transparent 60%),
+    radial-gradient(760px 420px at 6% 8%, rgba(52, 226, 164, 0.06), transparent 55%);
+}
+.app-hero-inner {
+  display: grid;
+  grid-template-columns: 1.05fr 0.95fr;
+  align-items: center;
+  gap: clamp(28px, 5vw, 64px);
+}
+.app-hero-copy {
+  max-width: 560px;
+}
+.app-hero h1 {
+  font-size: clamp(34px, 6vw, 60px);
+  letter-spacing: -0.035em;
+  margin-top: 18px;
+  background: linear-gradient(180deg, #ffffff 0%, #c9efdd 92%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+.app-hero h1 .hl {
+  background: linear-gradient(120deg, var(--accent), var(--accent-hover));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+.app-hero .lead {
+  margin: 20px 0 0;
+  max-width: 520px;
+}
+.app-hero-cta {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  flex-wrap: wrap;
+  margin-top: 30px;
+}
+.app-hero-points {
+  list-style: none;
+  margin: 26px 0 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 20px;
+}
+.app-hero-points li {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14.5px;
+  color: var(--text-secondary);
+}
+.app-hero-points svg {
+  width: 17px;
+  height: 17px;
+  flex: none;
+  color: var(--accent);
+}
+
+/* App Store download badge (self-contained, no external asset) */
+.appstore-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  background: #fff;
+  color: #000;
+  padding: 11px 20px 11px 18px;
+  border-radius: 14px;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.15s ease;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+}
+.appstore-badge:hover {
+  color: #000;
+  background: #f2f2f2;
+  transform: translateY(-1px);
+  box-shadow: 0 14px 36px rgba(0, 0, 0, 0.45);
+}
+.appstore-badge .apple {
+  width: 26px;
+  height: 26px;
+  flex: none;
+}
+.appstore-badge .txt {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.05;
+  text-align: left;
+}
+.appstore-badge .txt .small {
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+}
+.appstore-badge .txt .big {
+  font-size: 20px;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+
+/* Phone mockup */
+.app-hero-visual {
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+.phone {
+  position: relative;
+  width: clamp(230px, 30vw, 300px);
+  aspect-ratio: 9 / 19.5;
+  padding: 10px;
+  border-radius: 46px;
+  background: linear-gradient(160deg, #2a2a2e, #050506 55%);
+  border: 1px solid var(--border-strong);
+  box-shadow:
+    0 40px 80px -20px rgba(0, 0, 0, 0.75),
+    0 0 0 1px rgba(255, 255, 255, 0.03) inset,
+    0 0 90px -30px var(--accent);
+}
+.phone::before {
+  /* dynamic island */
+  content: "";
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 92px;
+  height: 26px;
+  background: #000;
+  border-radius: 999px;
+  z-index: 3;
+}
+.phone img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 38px;
+  display: block;
+  background: #000;
+}
+
+/* ==========================================================================
+   Motion & interactivity
+   ========================================================================== */
+
+/* Ambient glow orb behind the phone */
+.app-hero-visual::before {
+  content: "";
+  position: absolute;
+  width: 78%;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: radial-gradient(circle, var(--accent-soft), transparent 68%);
+  filter: blur(10px);
+  z-index: 0;
+  animation: pulse-glow 6s ease-in-out infinite;
+}
+.phone {
+  z-index: 1;
+  animation: float 7s ease-in-out infinite;
+  transition: transform 0.25s ease;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-14px); }
+}
+@keyframes pulse-glow {
+  0%, 100% { opacity: 0.55; transform: scale(1); }
+  50% { opacity: 0.9; transform: scale(1.06); }
+}
+
+/* Live pointer tilt (set by JS); overrides the float while hovering */
+.app-hero-visual.tilting .phone {
+  animation: none;
+}
+
+/* Animated status dot on the eyebrow pill */
+.eyebrow::before {
+  content: "";
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--accent);
+  box-shadow: 0 0 0 0 var(--accent-border);
+  animation: ping 2.4s ease-out infinite;
+}
+@keyframes ping {
+  0% { box-shadow: 0 0 0 0 rgba(52, 226, 164, 0.5); }
+  70%, 100% { box-shadow: 0 0 0 7px rgba(52, 226, 164, 0); }
+}
+
+/* App Store badge shimmer sweep on hover */
+.appstore-badge {
+  position: relative;
+  overflow: hidden;
+}
+.appstore-badge::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -75%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(
+    100deg,
+    transparent,
+    rgba(255, 255, 255, 0.65),
+    transparent
+  );
+  transform: skewX(-18deg);
+  transition: left 0.6s ease;
+}
+.appstore-badge:hover::after {
+  left: 130%;
+}
+
+/* Buttons lift on hover */
+.btn {
+  transition: background 0.15s ease, border-color 0.15s ease, color 0.15s ease,
+    transform 0.15s ease, box-shadow 0.15s ease;
+}
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 30px -10px var(--accent);
+}
+.btn-secondary:hover {
+  transform: translateY(-2px);
+}
+
+/* Screenshot strip hover zoom */
+.shot img {
+  transition: transform 0.35s ease, border-color 0.25s ease,
+    box-shadow 0.35s ease;
+}
+.shot:hover img {
+  transform: translateY(-6px) scale(1.02);
+  border-color: var(--accent-border);
+  box-shadow: 0 24px 50px -24px rgba(0, 0, 0, 0.8);
+}
+
+/* Popular-question rows slide + accent bar on hover */
+.q-list a {
+  position: relative;
+}
+.q-list a::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 3px;
+  background: var(--accent);
+  transform: scaleY(0);
+  transform-origin: center;
+  transition: transform 0.2s ease;
+}
+.q-list a:hover::before {
+  transform: scaleY(1);
+}
+.q-list a:hover {
+  padding-left: 24px;
+}
+.q-list a span:first-child {
+  transition: transform 0.18s ease;
+}
+
+/* Scroll-reveal — initial hidden state is gated by .reveal-on, which the home
+   page sets inline in <head> BEFORE first paint, so there's no flash. With JS
+   disabled the inline script never runs, .reveal-on is absent, and everything
+   stays visible. JS adds .in when each element scrolls into view. */
+.reveal-on .app-hero-copy,
+.reveal-on .app-hero-visual,
+.reveal-on .section-head,
+.reveal-on .category-card,
+.reveal-on .q-list,
+.reveal-on .shot,
+.reveal-on .callout,
+.reveal-on #browse .search {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.7s cubic-bezier(0.22, 0.61, 0.36, 1),
+    transform 0.7s cubic-bezier(0.22, 0.61, 0.36, 1);
+  will-change: opacity, transform;
+}
+.reveal-on .in {
+  opacity: 1 !important;
+  transform: none !important;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .phone,
+  .app-hero-visual::before,
+  .eyebrow::before {
+    animation: none !important;
+  }
+  .reveal-on .app-hero-copy,
+  .reveal-on .app-hero-visual,
+  .reveal-on .section-head,
+  .reveal-on .category-card,
+  .reveal-on .q-list,
+  .reveal-on .shot,
+  .reveal-on .callout,
+  .reveal-on #browse .search {
+    opacity: 1 !important;
+    transform: none !important;
+  }
 }
 
 /* ---------- Search ---------- */
@@ -437,8 +756,11 @@ main {
 }
 .category-card:hover {
   background: var(--surface-hover);
-  border-color: var(--border-strong);
+  border-color: var(--accent-border);
   color: var(--text);
+  transform: translateY(-4px);
+  box-shadow: 0 18px 40px -20px rgba(0, 0, 0, 0.8),
+    0 0 0 1px var(--accent-border) inset, 0 12px 40px -24px var(--accent);
 }
 .category-card .icon {
   width: 46px;
@@ -450,6 +772,13 @@ main {
   border: 1px solid var(--accent-border);
   border-radius: 13px;
   margin-bottom: 16px;
+  transition: transform 0.25s ease, background 0.2s ease, box-shadow 0.25s ease;
+}
+.category-card:hover .icon {
+  transform: scale(1.08) rotate(-3deg);
+  background: var(--accent);
+  color: var(--accent-ink);
+  box-shadow: 0 8px 22px -6px var(--accent);
 }
 .category-card h3 {
   font-size: 17px;
@@ -645,11 +974,11 @@ main {
 }
 .btn-primary {
   background: var(--accent);
-  color: #07130A;
+  color: var(--accent-ink);
 }
 .btn-primary:hover {
   background: var(--accent-hover);
-  color: #07130A;
+  color: var(--accent-ink);
 }
 .btn-secondary {
   background: var(--surface-2);
@@ -1070,6 +1399,40 @@ main {
     padding: 48px 0 28px;
   }
 
+  /* Download hero → stack, screenshot first for instant impression */
+  .app-hero {
+    padding: 32px 0 40px;
+    text-align: center;
+  }
+  .app-hero-inner {
+    grid-template-columns: 1fr;
+    gap: 34px;
+  }
+  .app-hero-copy {
+    max-width: none;
+    order: 2;
+  }
+  .app-hero-visual {
+    order: 1;
+  }
+  .app-hero .lead {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .app-hero-cta {
+    justify-content: center;
+  }
+  .app-hero-points {
+    justify-content: center;
+    gap: 10px 18px;
+  }
+  .phone {
+    width: clamp(210px, 62vw, 260px);
+  }
+  .appstore-badge {
+    width: auto;
+  }
+
   /* Mobile nav */
   .nav-toggle {
     display: inline-flex;
@@ -1080,7 +1443,7 @@ main {
     flex-direction: column;
     align-items: stretch;
     gap: 4px;
-    background: rgba(10, 10, 10, 0.98);
+    background: rgba(5, 5, 6, 0.98);
     backdrop-filter: blur(14px);
     -webkit-backdrop-filter: blur(14px);
     border-bottom: 1px solid var(--border);
